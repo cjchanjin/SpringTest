@@ -40,7 +40,10 @@ public class MemberController {
 	}
 	
 	@RequestMapping("memberDelete.do")
-	public String memberDelete() {
+	public String memberDelete(@RequestParam("mId") String id, Model model) throws Exception {
+		String mId = id;
+		System.out.println(mId);
+		
 		
 		return null;
 	}

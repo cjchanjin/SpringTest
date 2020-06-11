@@ -24,8 +24,22 @@
 		<div><br />
 			<a href="memberList.do">회원목록</a> &nbsp;&nbsp;
 			<a href="#">정보수정</a>	&nbsp;&nbsp;
-			<a href="memberDelete.do">회원삭제</a>
+			<button id="Aremove" onclick="e('${view.id}')">회원삭제</button> 
 		</div>
 	</div>
+	<form id="frm" name="frm" action="memberDelete.do" method="post">
+		<input type="hidden" id="mId" name="mId">
+	</form>
+<script>
+	function e(key) {
+		document.frm.mId.value=key;
+		console.log(key);
+		if (confirm('정말 삭제?') == true ){
+			document.frm.submit();	
+		} else {
+			close();
+		}
+	}
+</script>
 </body>
 </html>
