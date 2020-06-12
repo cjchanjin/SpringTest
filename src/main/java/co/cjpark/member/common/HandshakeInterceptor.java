@@ -19,8 +19,8 @@ public class HandshakeInterceptor extends HttpSessionHandshakeInterceptor{
 		ServletServerHttpRequest ssreq = (ServletServerHttpRequest) request;
 		HttpServletRequest req = ssreq.getServletRequest();
 		
-		LoginVO loginvo = (LoginVO) req.getSession().getAttribute("loginVo");
-		attributes.put("loginvo",  loginvo);
+		String cId = (String) req.getSession().getAttribute("userLoc");
+		attributes.put("cId",  cId);
 		
 //		attributes.put("userLoc", req.getSession().getAttribute("userLoc"));
 		

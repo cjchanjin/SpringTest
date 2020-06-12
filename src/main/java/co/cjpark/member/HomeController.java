@@ -13,7 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import co.cjpark.member.common.LoginVO;
+import co.cjpark.member.common.ChatVO;
 
 /**
  * Handles requests for the application home page.
@@ -27,7 +27,7 @@ public class HomeController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 	@RequestMapping("/main.do")
-	public String main(Locale locale, Model model, HttpSession session, HttpServletRequest request, LoginVO vo ) {
+	public String main(Locale locale, Model model, HttpSession session, HttpServletRequest request, ChatVO vo ) {
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
 		Date date = new Date();
@@ -37,9 +37,14 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
+		String ipAddress = request.getRemoteAddr();
+		System.out.println(ipAddress);
+		session.setAttribute("userLoc", ipAddress);
+		System.out.println();
 		
-		vo.setLoginId(request.getRemoteAddr());
-		session.setAttribute("loginVo", vo);
+//		vo.setLoginId(request.getRemoteAddr());
+//		session.setAttribute("loginVo", vo);
+//		System.out.println(vo);
 		
 		return "main";
 	}

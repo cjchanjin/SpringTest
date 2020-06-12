@@ -28,9 +28,9 @@
 	<beans:bean id="echoHandler" class="co.cjpark.member.common.EchoHandler" />
 	
 	<websocket:handlers>
-		<websocket:mapping handler="echoHandler" path="/echo" />
+		<websocket:mapping handler="echoHandler" path="/member" />
 		<websocket:handshake-interceptors>
-			<beans:bean class="org.springframework.web.socket.server.support.HttpSessionHandshakeInterceptor" />
+			<beans:bean class="co.cjpark.member.common.HandshakeInterceptor" />
 		</websocket:handshake-interceptors>
 		<websocket:sockjs />
 	</websocket:handlers>

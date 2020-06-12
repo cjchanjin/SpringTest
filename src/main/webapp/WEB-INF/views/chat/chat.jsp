@@ -4,8 +4,10 @@
 <head>
 	<title>Home</title>
 	<meta charset="UTF-8"/>
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.5/sockjs.min.js"></script>
+	
 </head>
 <style>
 #chat {
@@ -21,6 +23,8 @@
 		</form>
 	</div>
 	<script>
+		var sock = new SockJS("member");
+		
 		$(document).ready(function(){
 			$("#chatForm").submit(function(event){
 				event.preventDefault();
@@ -29,10 +33,8 @@
 			});
 		});
 		
-		var sock = new SockJS("/member/echo");
-		
 		sock.onopen = function() {
-			$("#chat").append("연결됨");
+			$("#chat").append("연결됨" + "<br/>");
 		}		
 		
 		sock.onmessage = function(e){
@@ -41,10 +43,9 @@
 		
 		sock.onclose = function(){
 			$("#chat").append("연결 종료");
-		}
-		
-		 //     채팅이 많아져 스크롤바가 넘어가더라도 자동적으로 스크롤바가 내려가게함
-		 /*
+		} 
+		 
+		/*  채팅이 많아져 스크롤바가 넘어가더라도 자동적으로 스크롤바가 내려가게함 
 	    window.setInterval(function() {
 	        var elem = document.getElementById('messageWindow');
 	        elem.scrollTop = elem.scrollHeight;

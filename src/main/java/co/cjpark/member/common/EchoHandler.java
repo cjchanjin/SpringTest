@@ -17,7 +17,7 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
 public class EchoHandler extends TextWebSocketHandler {
 	
 	@Autowired
-	public LoginVO vo;
+	public ChatVO vo;
 	
 	private List<WebSocketSession> sessionList = new ArrayList<WebSocketSession>();
 	private Map<String, WebSocketSession> map = new HashMap<String, WebSocketSession>();
@@ -27,16 +27,21 @@ public class EchoHandler extends TextWebSocketHandler {
 		sessionList.add(session);
 		System.out.println("클라이언트 접속됨");
 		
-		map.put(vo.getLoginId(), session);
-		System.out.println("userIp :" +map);
+		Map<String, Object> maps = session.getAttributes();
+		String cId = (String)maps.get("cId");
+		
+		map.put(cId, session);
+		System.out.println("map에 담긴값 :" +map);
 	}
 	
 	@Override
 	protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
 //		Map<String,Object> map = session.getAttributes();
 //		String userLoc = (String)session.getId();
+		
 		String userLoc = (String)session.getAttributes().get("userLoc");
-		System.out.println("userLoc :" +userLoc);
+		System.out.println("httpsession :" +userLoc);
+		System.out.println("WSsession : "+session);
 		
 //		InetAddress local = InetAddress.getLocalHost();
 //		String userLoc = local.getHostAddress();
