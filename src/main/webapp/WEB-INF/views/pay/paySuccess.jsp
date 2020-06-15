@@ -7,7 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>결제완료</h1>
-<a href = "main.do">메인으로</a>
+<div align="center">
+	<h1>결제완료</h1>
+		<div>
+		</div>
+	<a href = "main.do">메인으로</a>
+</div>
 </body>
 </html>

@@ -7,19 +7,19 @@
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
 		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />
-		<property name="username" value="cjpark" />
-		<property name="password" value="cjpark" />
+		<property name="username" value="CM" />
+		<property name="password" value="CM" />
 	</bean>
 	
 	<!-- 	SqlSession setup for Mybatis Database -->
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="configLocation" value="classpath:context/sql-mapper-config.xml" />
-		<property name="mapperLocations" value="classpath:/co/cjpark/member/mapper/*.xml" />
+		<property name="mapperLocations" value="classpath:/co/cjpark/member/**/mapper/*.xml" />
 	</bean>
 	
 	<!-- Mapper Interface 위치 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="co.cjpark.*.mapper" />
+		<property name="basePackage" value="co.cjpark.**.mapper" />
 	</bean>
 </beans>

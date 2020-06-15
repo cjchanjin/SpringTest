@@ -57,5 +57,5 @@ public class PayVo {
 		return "PayVo [imp_uid=" + imp_uid + ", merchant_uid=" + merchant_uid + ", apply_num=" + apply_num
 				+ ", paid_amount=" + paid_amount + ", buyer_name=" + buyer_name + "]";
 	}
-	
+
 }

@@ -3,6 +3,6 @@
 <mapper namespace="co.cjpark.member.pay.mapper.PayMapper">
 	
 	<insert id="payResultInsert" parameterType="PayVo">
-		insert into 
+		INSERT INTO PAYRESULT VALUES (#{imp_uid}, #{merchant_uid}, #{apply_num}, #{paid_amount}, #{buyer_name})
 	</insert>
 </mapper>
