@@ -3,5 +3,6 @@
 <configuration>
 	<typeAliases>
 		<typeAlias type="co.cjpark.member.service.MemberVo" alias="MemberVo"/>
+		<typeAlias type="co.cjpark.member.pay.service.PayVo" alias="PayVo"/>
 	</typeAliases>
 </configuration>
