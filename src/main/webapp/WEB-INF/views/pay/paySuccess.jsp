@@ -8,7 +8,7 @@
 </head>
 <body>
 <div align="center">
-	<h1>결제완료</h1>
+	<h1>결제완료시 나오는 페이지</h1>
 		<div>
 		</div>
 	<a href = "main.do">메인으로</a>

@@ -18,7 +18,8 @@
 		<div>
 			<a href=memberList.do>회원 목록</a><br/>
 			<a href=chat.do>채팅</a><br/>
-			<a href=pay.do>pay</a>
+			<a href=pay.do>pay</a><br/>
+			<a href=check.do>조건검색</a><br/>
 		</div>
 </div>
 

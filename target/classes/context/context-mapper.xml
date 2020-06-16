@@ -7,8 +7,8 @@
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
 		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />
-		<property name="username" value="CM" />
-		<property name="password" value="CM" />
+		<property name="username" value="cjpark" />
+		<property name="password" value="cjpark" />
 	</bean>
 	
 	<!-- 	SqlSession setup for Mybatis Database -->

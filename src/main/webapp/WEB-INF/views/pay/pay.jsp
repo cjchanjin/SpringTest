@@ -37,7 +37,9 @@
 	                    url: "savePayResult.do", //cross-domain error가 발생하지 않도록 주의해주세요
 	                    type: 'POST',
 	                    dataType: 'json',
-	                    data: { imp_uid:rsp.imp_uid  , merchant_uid:rsp.merchant_uid ,apply_num:rsp.apply_num, paid_amount: rsp.paid_amount, buyer_name:rsp.buyer_name  }
+	                    data: { imp_uid:rsp.imp_uid, merchant_uid:rsp.merchant_uid, 
+	                    		apply_num:rsp.apply_num, paid_amount: rsp.paid_amount, buyer_name:rsp.buyer_name 
+	                    	}
 	                    
 	                }).done(function(data) {
 	                    //[2] 서버에서 REST API로 결제정보확인 및 서비스루틴이 정상적인 경우

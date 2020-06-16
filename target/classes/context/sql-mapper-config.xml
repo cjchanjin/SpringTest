@@ -4,5 +4,6 @@
 	<typeAliases>
 		<typeAlias type="co.cjpark.member.service.MemberVo" alias="MemberVo"/>
 		<typeAlias type="co.cjpark.member.pay.service.PayVo" alias="PayVo"/>
+		<typeAlias type="co.cjpark.member.search.service.SearchFilterVo" alias="SearchFilterVo"/>
 	</typeAliases>
 </configuration>
