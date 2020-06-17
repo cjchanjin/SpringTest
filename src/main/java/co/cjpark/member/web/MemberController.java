@@ -28,6 +28,8 @@ public class MemberController {
 		mav.addObject("list", list);
 		mav.setViewName("member/memberList");
 		
+		System.out.println(list);
+		
 		return mav;
 	}
 	

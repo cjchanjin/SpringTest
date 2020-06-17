@@ -2,8 +2,8 @@ package co.cjpark.member.search.service;
 
 public class SearchFilterVo {
 	private String helperWorkArea;
-	private int helperStartTime;
-	private int helperEndTime;
+	private String helperStartTime;
+	private String helperEndTime;
 	private String certifiNo;
 	
 	public String getHelperWorkArea() {
@@ -12,16 +12,17 @@ public class SearchFilterVo {
 	public void setHelperWorkArea(String helperWorkArea) {
 		this.helperWorkArea = helperWorkArea;
 	}
-	public int getHelperStartTime() {
+	
+	public String getHelperStartTime() {
 		return helperStartTime;
 	}
-	public void setHelperStartTime(int helperStartTime) {
+	public void setHelperStartTime(String helperStartTime) {
 		this.helperStartTime = helperStartTime;
 	}
-	public int getHelperEndTime() {
+	public String getHelperEndTime() {
 		return helperEndTime;
 	}
-	public void setHelperEndTime(int helperEndTime) {
+	public void setHelperEndTime(String helperEndTime) {
 		this.helperEndTime = helperEndTime;
 	}
 	public String getCertifiNo() {
