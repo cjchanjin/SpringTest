@@ -48,5 +48,9 @@ public class ChatVO {
 		this.cDate = cDate;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "ChatVO [cId=" + cId + ", cName=" + cName + ", cContents=" + cContents + ", cDate=" + cDate + "]";
+	}
+
 }
